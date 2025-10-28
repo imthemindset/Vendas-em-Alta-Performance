@@ -1,765 +1,484 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ebook sobre vendas de alta performance - Técnicas e mentalidade para multiplicar seus resultados">
-    <meta name="keywords" content="vendas, ebook, marketing, empreendedorismo, alta performance">
-    <title>Ebook Vendas de Alta Performance - R$ 19,90 por tempo limitado</title>
+    <title>Venda Mais - Do Iniciante ao Profissional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<!-- Favicon -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #111111;
+            background: #FFFFFF;
+        }
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        line-height: 1.6;
-        color: #2d3748;
-        overflow-x: hidden;
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    /* Hero Section */
-    .hero {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 80px 0 100px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="2" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1.5" fill="%23ffffff" opacity="0.1"/><circle cx="50" cy="10" r="1" fill="%23ffffff" opacity="0.1"/></svg>');
-        animation: float 20s ease-in-out infinite;
-    }
-
-    @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
-    }
-
-    .hero-content {
-        position: relative;
-        z-index: 2;
-        text-align: center;
-        max-width: 700px;
-        margin: 0 auto;
-    }
-
-    .urgency-badge {
-        background: linear-gradient(90deg, #ff6b6b, #ee5a52);
-        color: white;
-        padding: 12px 24px;
-        border-radius: 30px;
-        font-size: 14px;
-        font-weight: 700;
-        display: inline-block;
-        margin-bottom: 25px;
-        animation: pulse 2s infinite;
-        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-    }
-
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-        100% { transform: scale(1); }
-    }
-
-    .hero h1 {
-        font-size: clamp(2.2rem, 4.5vw, 3.2rem);
-        font-weight: 800;
-        margin-bottom: 20px;
-        line-height: 1.1;
-    }
-
-    .hero .subtitle {
-        font-size: 1.2rem;
-        margin-bottom: 40px;
-        opacity: 0.95;
-        line-height: 1.4;
-        font-weight: 400;
-    }
-
-    .price-box {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 30px;
-        margin: 30px auto 40px;
-        max-width: 400px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .old-price {
-        font-size: 1.1rem;
-        text-decoration: line-through;
-        opacity: 0.7;
-        margin-bottom: 8px;
-    }
-
-    .new-price {
-        font-size: 2.8rem;
-        font-weight: 800;
-        color: #4ade80;
-        margin-bottom: 8px;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .price-note {
-        font-size: 0.9rem;
-        opacity: 0.8;
-    }
-
-    .main-cta {
-        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-        color: white;
-        padding: 18px 40px;
-        font-size: 1.1rem;
-        font-weight: 700;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 20px;
-    }
-
-    .main-cta:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
-    }
-
-    .guarantee-text {
-        margin-top: 20px;
-        font-size: 0.9rem;
-        opacity: 0.9;
-    }
-
-    /* What You'll Learn Section */
-    .benefits {
-        padding: 100px 0;
-        background: #f8fafc;
-    }
-
-    .section-title {
-        font-size: 2.3rem;
-        font-weight: 800;
-        text-align: center;
-        margin-bottom: 15px;
-        color: #1a202c;
-    }
-
-    .section-subtitle {
-        text-align: center;
-        font-size: 1.1rem;
-        color: #4a5568;
-        margin-bottom: 60px;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .benefits-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 30px;
-    }
-
-    .benefit-card {
-        background: white;
-        padding: 35px 25px;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        transition: all 0.3s ease;
-        border: 1px solid #e2e8f0;
-        text-align: left;
-    }
-
-    .benefit-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-    }
-
-    .benefit-icon {
-        width: 50px;
-        height: 50px;
-        background: linear-gradient(135deg, #667eea, #764ba2);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-        font-size: 20px;
-    }
-
-    .benefit-title {
-        font-size: 1.2rem;
-        font-weight: 700;
-        margin-bottom: 12px;
-        color: #1a202c;
-    }
-
-    .benefit-description {
-        color: #4a5568;
-        line-height: 1.6;
-    }
-
-    /* Social Proof Section */
-    .social-proof {
-        padding: 100px 0;
-        background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
-        color: white;
-    }
-
-    .stats-container {
-        margin-bottom: 80px;
-    }
-
-    .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 40px;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    .stat-item {
-        text-align: center;
-    }
-
-    .stat-number {
-        font-size: 2.5rem;
-        font-weight: 800;
-        color: #4ade80;
-        margin-bottom: 8px;
-        display: block;
-    }
-
-    .stat-label {
-        font-size: 1rem;
-        opacity: 0.9;
-    }
-
-    .testimonials-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 30px;
-    }
-
-    .testimonial-card {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 30px;
-        border-radius: 16px;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .testimonial-text {
-        font-style: italic;
-        margin-bottom: 20px;
-        line-height: 1.6;
-    }
-
-    .testimonial-author {
-        font-weight: 600;
-        color: #4ade80;
-        font-size: 0.9rem;
-    }
-
-    /* Urgency Section */
-    .urgency-section {
-        background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
-        padding: 70px 0;
-        text-align: center;
-        border-top: 3px solid #f87171;
-    }
-
-    .urgency-section h2 {
-        color: #dc2626;
-        font-size: 1.8rem;
-        font-weight: 800;
-        margin-bottom: 20px;
-    }
-
-    .countdown-timer {
-        font-size: 2.2rem;
-        font-weight: 800;
-        color: #dc2626;
-        margin: 25px 0;
-        font-family: 'Courier New', monospace;
-    }
-
-    .urgency-text {
-        color: #7f1d1d;
-        font-size: 1rem;
-        font-weight: 600;
-    }
-
-    /* Guarantee Section */
-    .guarantee-section {
-        padding: 80px 0;
-        background: linear-gradient(135deg, #f0fff4 0%, #dcfce7 100%);
-        text-align: center;
-    }
-
-    .guarantee-icon {
-        width: 100px;
-        height: 100px;
-        background: linear-gradient(135deg, #10b981, #059669);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 25px;
-        color: white;
-        font-size: 32px;
-        font-weight: 800;
-    }
-
-    .guarantee-title {
-        color: #065f46;
-        font-size: 2rem;
-        font-weight: 800;
-        margin-bottom: 20px;
-    }
-
-    .guarantee-description {
-        font-size: 1.1rem;
-        max-width: 600px;
-        margin: 0 auto;
-        color: #047857;
-        line-height: 1.6;
-    }
-
-    /* FAQ Section */
-    .faq-section {
-        padding: 100px 0;
-        background: white;
-    }
-
-    .faq-container {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    .faq-item {
-        margin-bottom: 16px;
-        border: 1px solid #e2e8f0;
-        border-radius: 12px;
-        overflow: hidden;
-    }
-
-    .faq-question {
-        padding: 24px;
-        background: #f7fafc;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .faq-question:hover {
-        background: #edf2f7;
-    }
-
-    .faq-answer {
-        padding: 24px;
-        background: white;
-        display: none;
-        color: #4a5568;
-        line-height: 1.6;
-    }
-
-    .faq-icon {
-        font-size: 18px;
-        transition: transform 0.3s ease;
-    }
-
-    /* Final CTA Section */
-    .final-cta {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 100px 0;
-        text-align: center;
-    }
-
-    .final-cta h2 {
-        font-size: 2.5rem;
-        font-weight: 800;
-        margin-bottom: 20px;
-    }
-
-    .final-cta-description {
-        font-size: 1.2rem;
-        margin-bottom: 40px;
-        opacity: 0.95;
-    }
-
-    .final-price-box {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 40px;
-        max-width: 500px;
-        margin: 0 auto 40px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .final-cta-button {
-        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-        color: white;
-        padding: 22px 50px;
-        font-size: 1.3rem;
-        font-weight: 700;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
-        text-decoration: none;
-        display: inline-block;
-    }
-
-    .final-cta-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
-    }
-
-    .security-badges {
-        margin-top: 30px;
-        font-size: 0.9rem;
-        opacity: 0.9;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
+        /* HERO SECTION */
         .hero {
-            padding: 60px 0 80px;
+            background: linear-gradient(135deg, #0B0B0B 0%, #1a1a1a 100%);
+            color: #FFFFFF;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-        
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
         .hero h1 {
-            font-size: 2rem;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            line-height: 1.2;
+            color: #FFFFFF;
         }
-        
-        .benefits, .social-proof, .guarantee-section, .faq-section {
-            padding: 60px 0;
+
+        .hero .gold-text {
+            color: #D4AF37;
         }
-        
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            color: #BFBFBF;
+            margin-bottom: 50px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%);
+            color: #0B0B0B;
+            padding: 20px 60px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+        }
+
+        .price-box {
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid #D4AF37;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+            display: inline-block;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999999;
+            font-size: 1.2rem;
+        }
+
         .new-price {
-            font-size: 2.3rem;
+            color: #FFD700;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-top: 10px;
         }
-        
-        .benefits-grid {
-            grid-template-columns: 1fr;
-            gap: 20px;
+
+        /* SECTIONS */
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        
-        .testimonials-grid {
-            grid-template-columns: 1fr;
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #111111;
+            position: relative;
+            padding-bottom: 20px;
         }
-        
-        .stats-grid {
-            grid-template-columns: repeat(2, 1fr);
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #FFD700, #D4AF37);
         }
-    }
-</style>
+
+        /* LEARNING SECTION */
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .learning-item {
+            background: #FFFFFF;
+            border: 2px solid #F5F5F5;
+            padding: 30px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .learning-item:hover {
+            border-color: #D4AF37;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .learning-item::before {
+            content: '✓';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #FFD700, #D4AF37);
+            color: #0B0B0B;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: 900;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .learning-item strong {
+            color: #111111;
+            font-size: 1.1rem;
+        }
+
+        /* FOR YOU SECTION */
+        .foryou-section {
+            background: #F5F5F5;
+        }
+
+        .foryou-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .foryou-item {
+            background: #FFFFFF;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #D4AF37;
+            font-size: 1.1rem;
+            color: #111111;
+        }
+
+        /* WHY IT WORKS */
+        .why-section {
+            background: #0B0B0B;
+            color: #FFFFFF;
+        }
+
+        .why-section .section-title {
+            color: #FFFFFF;
+        }
+
+        .why-section .section-title::after {
+            background: linear-gradient(90deg, #FFD700, #D4AF37);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .why-card {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .why-card h3 {
+            color: #FFD700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .why-card p {
+            color: #BFBFBF;
+            line-height: 1.7;
+        }
+
+        /* BONUS SECTION */
+        .bonus-section {
+            background: linear-gradient(135deg, #EDE8D0 0%, #F5F5F5 100%);
+        }
+
+        .bonus-box {
+            background: #FFFFFF;
+            border: 3px solid #D4AF37;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 800px;
+            margin: 40px auto 0;
+            text-align: center;
+        }
+
+        .bonus-badge {
+            background: linear-gradient(135deg, #FFD700, #D4AF37);
+            color: #0B0B0B;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .bonus-box h3 {
+            font-size: 1.8rem;
+            color: #111111;
+            margin-bottom: 15px;
+        }
+
+        .bonus-box p {
+            color: #555555;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #0B0B0B 0%, #1a1a1a 100%);
+            color: #FFFFFF;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            color: #FFFFFF;
+        }
+
+        .final-cta .gold-highlight {
+            color: #FFD700;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            color: #BFBFBF;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0B0B0B;
+            color: #999999;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #333333;
+        }
+
+        footer a {
+            color: #D4AF37;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                padding: 18px 40px;
+                font-size: 1.1rem;
+            }
+
+            .new-price {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Hero Section -->
+    <!-- HERO SECTION -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="urgency-badge">🔥 OFERTA ESPECIAL - ÚLTIMAS 48 HORAS</div>
-                <h1>Domine as Técnicas de Vendas que Multiplicam Resultados</h1>
-                <p class="subtitle">O guia definitivo para desenvolver mentalidade vencedora e aplicar estratégias de alta performance que realmente funcionam</p>
-
+        <div class="hero-content">
+            <h1>Venda Todos os Dias — <span class="gold-text">Mesmo Sem Ser Um Vendedor Nato</span></h1>
+            <p class="subtitle">
+                Descubra as técnicas, estratégias e mentalidade que transformam qualquer pessoa comum em um profissional que vende com consistência e confiança.
+            </p>
+            <a href="#comprar" class="cta-button">Quero Vender Mais Agora</a>
+            
             <div class="price-box">
-                <div class="old-price">De R$ 97,00</div>
-                <div class="new-price">R$ 19,90</div>
-                <div class="price-note">Investimento único - Acesso vitalício</div>
-            </div>
-            
-            <a href="https://pay.hotmart.com/V89064559H" target="_blank" class="main-cta">
-                QUERO TRANSFORMAR MINHAS VENDAS AGORA
-            </a>
-            
-            <div class="guarantee-text">
-                ✅ Entrega imediata por e-mail<br>
-                ✅ Garantia incondicional de 7 dias
+                <div class="old-price">De R$ 197</div>
+                <div class="new-price">Por apenas R$ 97,00</div>
+                <p style="color: #BFBFBF; margin-top: 10px;">Pagamento único • Acesso imediato</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Benefits Section -->
-<section class="benefits">
-    <div class="container">
-        <h2 class="section-title">O que você vai dominar</h2>
-        <p class="section-subtitle">Técnicas comprovadas por especialistas que já geraram milhões em vendas</p>
-        
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <div class="benefit-icon">🎯</div>
-                <h3 class="benefit-title">Psicologia da Persuasão</h3>
-                <p class="benefit-description">Aprenda os gatilhos mentais e técnicas psicológicas que influenciam decisões de compra e aumentam drasticamente sua taxa de conversão.</p>
+    <!-- O QUE VOCÊ VAI APRENDER -->
+    <section class="section">
+        <h2 class="section-title">O Que Você Vai Aprender</h2>
+        <div class="learning-grid">
+            <div class="learning-item">
+                <strong>Entender o seu público-alvo</strong> — Como identificar quem realmente compra de você e por quê.
             </div>
-            
-            <div class="benefit-card">
-                <div class="benefit-icon">🧠</div>
-                <h3 class="benefit-title">Mentalidade de Elite</h3>
-                <p class="benefit-description">Desenvolva a mentalidade inabalável dos top performers. Supere objeções, rejeições e transforme "não" em oportunidades.</p>
+            <div class="learning-item">
+                <strong>Vendas ativas de forma natural</strong> — Como gerar oportunidades todos os dias, mesmo sem equipe.
             </div>
-            
-            <div class="benefit-card">
-                <div class="benefit-icon">💬</div>
-                <h3 class="benefit-title">Scripts de Fechamento</h3>
-                <p class="benefit-description">Tenha acesso aos scripts e técnicas de fechamento mais eficazes, testados por vendedores que faturam milhões por ano.</p>
+            <div class="learning-item">
+                <strong>Técnicas de persuasão que funcionam</strong> — Como conduzir conversas que geram "sim" sem pressão.
             </div>
-            
-            <div class="benefit-card">
-                <div class="benefit-icon">🚀</div>
-                <h3 class="benefit-title">Modelo de Abordagem</h3>
-                <p class="benefit-description">Domine um método estruturado para abordar clientes de forma natural e criar interesse genuíno desde o primeiro contato.</p>
+            <div class="learning-item">
+                <strong>Primeira impressão e autoridade</strong> — Como transmitir confiança desde o primeiro contato.
             </div>
-            
-            <div class="benefit-card">
-                <div class="benefit-icon">📈</div>
-                <h3 class="benefit-title">Técnicas Práticas de Vendas</h3>
-                <p class="benefit-description">Tenha um modelo completo com técnicas específicas para usar em suas vendas, do início ao fechamento com confiança total.</p>
+            <div class="learning-item">
+                <strong>Relacionamento e pós-venda</strong> — Como transformar clientes em promotores da sua marca.
             </div>
-            
-            <div class="benefit-card">
-                <div class="benefit-icon">⚡</div>
-                <h3 class="benefit-title">Resultados Acelerados</h3>
-                <p class="benefit-description">Métodos práticos para implementar e ver resultados nas primeiras semanas, não meses ou anos.</p>
+            <div class="learning-item">
+                <strong>Mentalidade de vendedor vencedor</strong> — Como se manter firme, mesmo depois dos "nãos".
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Social Proof Section -->
-<section class="social-proof">
-    <div class="container">
-        <h2 class="section-title" style="color: white; margin-bottom: 20px;">Resultados que Falam por Si</h2>
-        <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Junte-se a empreendedores que já transformaram suas vendas</p>
-        
-        <div class="stats-container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">1.223</span>
-                    <div class="stat-label">Empreendedores Transformados</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">280%</span>
-                    <div class="stat-label">Aumento Médio em Vendas</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">4.8★</span>
-                    <div class="stat-label">Avaliação dos Alunos</div>
-                </div>
+    <!-- ESTE E-BOOK É PRA VOCÊ -->
+    <section class="section foryou-section">
+        <h2 class="section-title">Este E-book É Pra Você Se...</h2>
+        <div class="foryou-list">
+            <div class="foryou-item">
+                Quer começar a vender, mas ainda se sente travado.
+            </div>
+            <div class="foryou-item">
+                Já tentou vender, mas não consegue ter consistência.
+            </div>
+            <div class="foryou-item">
+                Quer aprender a vender qualquer produto, serviço ou ideia.
+            </div>
+            <div class="foryou-item">
+                Deseja aumentar sua renda com técnicas práticas.
+            </div>
+            <div class="foryou-item">
+                Quer desenvolver uma mentalidade de vendedor campeão.
             </div>
         </div>
-        
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-text">"Implementei as técnicas em 15 dias e já vi um aumento de 240% nas minhas vendas. O método funciona mesmo, não é teoria."</div>
-                <div class="testimonial-author">— Ana Carolina, Consultora de Marketing Digital</div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-text">"Finalmente entendi o que estava fazendo de errado. Minha taxa de conversão saltou de 12% para 38% em menos de um mês."</div>
-                <div class="testimonial-author">— Ricardo Santos, Vendedor B2B</div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-text">"O ebook mudou minha forma de abordar clientes. Hoje fecho vendas que antes achava impossíveis. Vale cada centavo."</div>
-                <div class="testimonial-author">— Fernanda Lima, Corretora de Imóveis</div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Urgency Section -->
-<section class="urgency-section">
-    <div class="container">
-        <h2>⚠️ Esta oferta expira em:</h2>
-        <div class="countdown-timer" id="countdown">23:47:12</div>
-        <p class="urgency-text">Depois desse prazo, o preço volta para R$ 97,00</p>
-    </div>
-</section>
-
-<!-- Guarantee Section -->
-<section class="guarantee-section">
-    <div class="container">
-        <div class="guarantee-icon">7D</div>
-        <h2 class="guarantee-title">Garantia de Satisfação Total</h2>
-        <p class="guarantee-description">
-            Você tem 7 dias completos para testar todo o conteúdo. Se não estiver 100% satisfeito, 
-            devolvemos seu dinheiro integral, sem perguntas ou burocracias.
+    <!-- POR QUE O MÉTODO FUNCIONA -->
+    <section class="section why-section">
+        <h2 class="section-title">Por Que O Método Funciona</h2>
+        <p style="text-align: center; color: #BFBFBF; font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px;">
+            O conteúdo do Venda Mais foi construído a partir de:
         </p>
-    </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="faq-section">
-    <div class="container">
-        <h2 class="section-title">Perguntas Frequentes</h2>
-        
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>Como vou receber o ebook após a compra?</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    Após a confirmação do pagamento, você receberá o ebook automaticamente em seu e-mail em até 5 minutos. Também terá acesso a uma área exclusiva para download.
-                </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <h3>Experiências Reais</h3>
+                <p>Estratégias testadas em campo, em negociações reais com resultados comprovados.</p>
             </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>O método funciona para qualquer tipo de negócio?</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    Sim! As técnicas são baseadas em princípios universais da psicologia humana e funcionam em vendas B2B, B2C, produtos físicos, digitais, serviços e consultorias.
-                </div>
+            <div class="why-card">
+                <h3>Alta Performance</h3>
+                <p>Técnicas de fechamento utilizadas por profissionais de elite em vendas.</p>
             </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>Em quanto tempo vou ver os primeiros resultados?</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    A maioria dos nossos leitores reporta melhorias significativas nas primeiras 2-3 semanas de aplicação. Os resultados dependem da consistência na implementação das técnicas.
-                </div>
+            <div class="why-card">
+                <h3>Comportamento Humano</h3>
+                <p>Princípios de influência e psicologia aplicados à arte de vender.</p>
             </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>Preciso ter experiência prévia em vendas?</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    Não! O conteúdo foi desenvolvido tanto para iniciantes quanto para vendedores experientes. Começamos com fundamentos sólidos e evoluímos para técnicas avançadas.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>O pagamento é seguro?</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    Totalmente seguro. Utilizamos plataformas de pagamento com certificação SSL e criptografia bancária. Seus dados estão 100% protegidos.
-                </div>
+            <div class="why-card">
+                <h3>Mentalidade Vencedora</h3>
+                <p>Fundamentos mentais que moldam vendedores de sucesso e campeões.</p>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Final CTA -->
-<section class="final-cta" id="final-cta">
-    <div class="container">
-        <h2>Não Deixe Esta Oportunidade Passar</h2>
-        <p class="final-cta-description">
-            Mais de 1.200 empreendedores já transformaram seus resultados. Agora é a sua vez.
+        <p style="text-align: center; color: #FFD700; font-size: 1.3rem; font-weight: 700; margin-top: 50px;">
+            Não é teoria. É método prático, direto, aplicável e comprovado.
         </p>
-        
-        <div class="final-price-box">
-            <div class="old-price" style="font-size: 1.2rem;">De R$ 97,00</div>
-            <div class="new-price">R$ 19,90</div>
-            <div class="price-note">Oferta por tempo limitado</div>
-        </div>
-        
-        <a href="https://pay.hotmart.com/V89064559H" target="_blank" class="final-cta-button">
-            GARANTIR MINHA CÓPIA AGORA
-        </a>
-        
-        <div class="security-badges">
-            🔒 Pagamento 100% seguro | ✅ Garantia de 7 dias | ⚡ Entrega imediata
-        </div>
-    </div>
-</section>
+    </section>
 
-<script>
-    // Countdown Timer
-    function startCountdown() {
-        const countdownElement = document.getElementById('countdown');
-        
-        // Set end time to 23 hours, 47 minutes, 12 seconds from now
-        const now = new Date().getTime();
-        const endTime = now + (23 * 3600 + 47 * 60 + 12) * 1000;
-        
-        const timer = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = endTime - now;
-            
-            if (distance < 0) {
-                clearInterval(timer);
-                countdownElement.innerHTML = "OFERTA EXPIROU";
-                return;
-            }
-            
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            countdownElement.innerHTML = 
-                String(hours).padStart(2, '0') + ':' + 
-                String(minutes).padStart(2, '0') + ':' + 
-                String(seconds).padStart(2, '0');
-        }, 1000);
-    }
-    
-    // Start countdown when page loads
-    startCountdown();
-    
-    // FAQ Toggle Function
-    function toggleFaq(element) {
-        const answer = element.nextElementSibling;
-        const icon = element.querySelector('.faq-icon');
-        const isOpen = answer.style.display === 'block';
-        
-        // Close all other FAQs
-        document.querySelectorAll('.faq-answer').forEach(faq => {
-            faq.style.display = 'none';
-        });
-        document.querySelectorAll('.faq-icon').forEach(icon => {
-            icon.textContent = '+';
-        });
-        
-        // Toggle current FAQ
-        if (!isOpen) {
-            answer.style.display = 'block';
-            icon.textContent = '−';
-        }
-    }
-</script>
-```
+    <!-- BÔNUS EXCLUSIVO -->
+    <section class="section bonus-section">
+        <h2 class="section-title">Bônus Exclusivo</h2>
+        <div class="bonus-box">
+            <div class="bonus-badge">🎁 Bônus Especial</div>
+            <h3>Checklist Diário do Vendedor de Sucesso</h3>
+            <p>
+                Tenha um plano de ação diário com passos simples para manter o foco, a consistência e o entusiasmo — mesmo nos dias difíceis. Um guia prático para transformar sua rotina em resultados.
+            </p>
+        </div>
+    </section>
 
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="comprar">
+        <h2>Comece Agora Sua <span class="gold-highlight">Transformação em Vendas</span></h2>
+        <p>O valor de uma refeição — o retorno de uma vida inteira de resultados.</p>
+        
+        <div class="price-box" style="margin-bottom: 40px;">
+            <div class="old-price">De R$ 197</div>
+            <div class="new-price">Por apenas R$ 97,00</div>
+            <p style="color: #BFBFBF; margin-top: 10px;">Pagamento único • Acesso imediato</p>
+        </div>
+
+        <a href="#" class="cta-button">Quero Vender Mais Agora</a>
+        
+        <p style="margin-top: 30px; font-size: 0.9rem;">Acesso imediato após o pagamento • 100% digital</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Venda Mais. Todos os direitos reservados.</p>
+        <p style="margin-top: 10px;">
+            <a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a>
+        </p>
+    </footer>
 </body>
 </html>
